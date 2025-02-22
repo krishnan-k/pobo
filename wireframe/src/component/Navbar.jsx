@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import user from "../assets/user.png";
 
 const Navbar = () => {
-  const [isHospitalsOpen, setIsHospitalsOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState(null);
   const [activeState, setActiveState] = useState(1);
+  const navigate = useNavigate(); // Hook for navigation
 
-  const toggleDropdown = () => {
-    setIsHospitalsOpen(!isHospitalsOpen);
+  const toggleDropdown = (index) => {
+    setOpenSubmenu((prev) => (prev === index ? null : index));
   };
 
-  const handleMouseOver = (index) => {
-    setActiveState(index);
-  };
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (!event.target.closest(".dropdown")) {
-        setIsHospitalsOpen(false);
+        setOpenSubmenu(null);
       }
     };
     document.addEventListener("click", handleClickOutside);
@@ -28,16 +26,16 @@ const Navbar = () => {
 
   const menuItems = [
     {
-      href: "/hospitals", label: "hospitals",
-      submenu: [{ href: "/", label: "Home" }],
+      href: "/hospitals",
+      label: "hospitals",
     },
-    { 
-      href: "/doctors", label: "doctors",
-      submenu: [{ href: "/", label: "Home" }],
+    {
+      href: "/doctors",
+      label: "doctors",
     },
-    { 
-      href: "/whoweare", label: "who we are?",
-      submenu: [{ href: "/", label: "Home" }],
+    {
+      href: "/whoweare",
+      label: "who we are?",
     },
   ];
 
@@ -46,7 +44,7 @@ const Navbar = () => {
       <div className="header_section max-w-[1320px] m-auto flex items-center justify-between pt-7 pb-7 pr-1 pl-1 md_screen">
         <div className="header-logo">
           <Link to="/">
-            <img src={logo} alt="logo" style={{ width: "160px",objectFit: "contain" }}/>
+            <img src={logo} alt="logo" style={{ width: "160px", objectFit: "contain" }} />
           </Link>
         </div>
         <div className="navigation">
@@ -55,22 +53,29 @@ const Navbar = () => {
               {menuItems.map((item, index) => (
                 <li
                   key={index}
-                  className={`${
-                  activeState === index ? "active" : ""} mr-8 relative dropdown`}
-                  onClick={() => handleMouseOver(index)}
+                  className={`relative dropdown mr-10 ${activeState === index ? "active" : ""}`}
+                  onMouseEnter={() => setOpenSubmenu(index)}
+                  onMouseLeave={() => setOpenSubmenu(null)}
                 >
                   <Link
-                    className={`${activeState === index ? "text-[#ff5200]" : "text-[#1f2937]"} 
-                    capitalize font-medium text-[15px] flex items-center transition`}
+                    className={`capitalize font-medium text-[15px] flex items-center transition ${
+                      activeState === index ? "text-[#ff5200]" : "text-[#1f2937]"
+                    }`}
                     to={item.href}
-                    onClick={item.submenu? (e) => {e.preventDefault();toggleDropdown();}: undefined}>
+                    onClick={(e) => {
+                      if (item.submenu) {
+                        e.preventDefault();
+                        toggleDropdown(index);
+                      } else {
+                        navigate(item.href);
+                      }
+                    }}
+                  >
                     {item.label}
-                    {item.submenu && (
-                    <i className="fa fa-chevron-down ml-3 text-[10px]"></i>
-                    )}
+                    {item.submenu && <i className="fa fa-chevron-down ml-3 text-[10px]"></i>}
                   </Link>
 
-                  {item.submenu && isHospitalsOpen && (
+                  {item.submenu && openSubmenu === index && (
                     <ul className="absolute left-0 mt-2 bg-white border rounded shadow-lg w-40">
                       {item.submenu.map((subItem, subIndex) => (
                         <li key={subIndex} className="p-2 hover:bg-gray-200">
@@ -85,7 +90,12 @@ const Navbar = () => {
           </nav>
         </div>
         <div className="user_icon flex items-center">
-          <img src={user} alt="user" className="border" style={{ width: "35px", height: "35px", objectFit: "contain", borderRadius: "50%" }}/>
+          <img
+            src={user}
+            alt="user"
+            className="border"
+            style={{ width: "35px", height: "35px", objectFit: "contain", borderRadius: "50%" }}
+          />
           <i className="fa fa-chevron-down ml-2 text-[10px]"></i>
         </div>
       </div>

@@ -8,4 +8,12 @@
 html {
   scroll-behavior: smooth;
 }
-
+.flex svg path {
+  fill: #272b41;
+}
+.flex.active svg path{
+  fill: white;
+}
+.hospital_pattern{
+  object-fit: cover;
+}
