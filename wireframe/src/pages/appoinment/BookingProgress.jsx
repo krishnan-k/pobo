@@ -13,10 +13,10 @@ const BookingProgress = () => {
   return (
     <>
       <div
-        className="flex items-end justify-between flex-wrap px-6.5 py-7 mt-5 rounded-[12px] flex-wrap gap-y-[20px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5.5 max-[767px]:pr-3.5"
+        className="flex items-end justify-between flex-wrap px-6.5 py-7 mt-5 rounded-[12px] flex-wrap gap-y-[20px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5 max-[767px]:pr-3.5 max-[767px]:py-4 max-[767px]:gap-y-[0px]"
         style={{ boxShadow: "rgba(149, 157, 165, 0.1) 0px 21px 35px" }}
       >
-        <div className="profile_character flex items-center justify-start gap-2 flex-row basis-44 max-[767px]:basis-auto">
+        <div className="profile_character flex items-center justify-start gap-2 flex-row basis-44 max-[767px]:basis-auto max-[767px]:pb-4">
           <div className="profile_avatar w-[50px] h-[50px] bg-[#ff5200] flex items-center justify-center rounded-xl">
             <p className="text-white font-bold uppercase text-xl">jo</p>
           </div>
@@ -41,7 +41,7 @@ const BookingProgress = () => {
             </p>
           </div>
         </div>
-        <div className="booking_status">
+        <div className="booking_status max-[767px]:w-full max-[767px]:pt-2 max-[767px]:mt-4 max-[767px]:border-t-[1px] max-[767px]:border-[#e2e8f0]">
           <div className="flex items-center justify-between mb-1 flex-wrap gap-y-[5px]">
             <div className="accept px-3.5 flex items-center justify-between gap-2 border-r-[2px] border-gray-200 max-[767px]:pl-0 max-[767px]:border-r-[0px] max-[767px]:pl-0">
               <i className="fa fa-check text-[#0f9500]" aria-hidden="true"></i>
@@ -65,7 +65,7 @@ const BookingProgress = () => {
               <i className="fa-solid fa-play"></i>
               <div className="book_status">
                 <div className=" absolute right-0 -top-[23px] bg-[#ff5200] px-2 py-1 rounded-lg max-[767px]:relative max-[767px]:top-0">
-                  <p className="text-xs capitalize text-right font-bold text-white">
+                  <p className="text-xs capitalize text-right font-bold text-white text-center">
                     in progress
                   </p>
                 </div>
@@ -80,11 +80,11 @@ const BookingProgress = () => {
         </div>
       </div>
       <div
-        className="pl-8.5 pr-6.5 py-6.5 rounded-[12px] border border-[#e2e8f0] my-4"
+        className="pl-8.5 pr-6.5 py-6.5 rounded-[12px] border border-[#e2e8f0] my-4 max-[767px]:pl-5 max-[767px]:pr-3.5"
         style={{ boxShadow: "rgba(149, 157, 165, 0.15) 0px 8px 24px" }}
       >
-        <div className="appoinment_details_section flex items-start justify-between flex-wrap gap-y-[20px] max-[767px]:flex-col">
-          <div className="appoinment_information">
+        <div className="appoinment_details_section flex items-start justify-between flex-wrap gap-y-[20px] max-[767px]:flex-col max-[767px]:gap-y-[0px]">
+          <div className="appoinment_information max-[767px]:w-full max-[767px]:pb-4 max-[767px]:mb-4 max-[767px]:border-b-[1px] max-[767px]:border-[#e2e8f0]">
             <div className="flex items-center justify-start gap-2 pb-2.5">
               <img src={one} alt="image" />
               {/* <i
@@ -111,7 +111,7 @@ const BookingProgress = () => {
               <p className="text-[#686767] font-normal text-sm">9655770823</p>
             </div>
           </div>
-          <div className="booking_consulation pl-6.5 max-[767px]:pl-0">
+          <div className="booking_consulation pl-6.5 max-[767px]:pl-0 max-[767px]:w-full max-[767px]:pb-4 max-[767px]:mb-4 max-[767px]:border-b-[1px] max-[767px]:border-[#e2e8f0]">
             <div className="flex items-center justify-start gap-2 pb-2.5">
               {/* <i class="far fa-calendar-check text-[#6b72a1] text-lg"></i> */}
               <img src={four} alt="image" />
@@ -157,7 +157,7 @@ const BookingProgress = () => {
             </div>
           </div>
         </div>
-        <div className="booking_status pt-6 mt-7 border-t-[1px] border-[#e2e8f0]">
+        <div className="booking_status pt-6 mt-7 border-t-[1px] border-[#e2e8f0] max-[767px]:pt-3 max-[767px]:mt-3.5">
           <div className="flex items-center justify-end mb-1 max-[767px]:justify-start flex-wrap gap-y-[5px]">
             <div className="accept px-5.5 flex items-center justify-between gap-2 border-r-[2px] border-gray-200 max-[767px]:pl-0 max-[767px]:border-r-[0px]">
               <i className="fa fa-check text-[#0f9500]" aria-hidden="true"></i>

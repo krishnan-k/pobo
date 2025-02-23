@@ -11,9 +11,9 @@ const Appoinments = () => {
   };
   return (
     <div className="appoinment_section">
-      <div className="flex justify-between border-b-[1px] border-[#e2e8f0] pb-3 max-[767px]:flex-col gap-y-[20px]">
+      <div className="flex justify-between border-b-[1px] border-[#e2e8f0] pb-3 max-[767px]:flex-col gap-y-[20px] max-[576px]:justify-center items-center">
         <div className="appoinment_heading">
-          <h3 className="text-[26px] leading-none font-semibold text-[#272b41] capitalize">
+          <h3 className="text-[26px] leading-none font-semibold text-[#272b41] capitalize max-[767px]:text-[20px]">
             today appoinments ( 5 / 40){" "}
           </h3>
         </div>

@@ -32,7 +32,7 @@ const DoctorProfile = () => {
   ];
   return (
     <>
-      <button className="drawer-toggle-user flex items-center justify-center w-[38px] h-[38px] bg-[#009efb] mr-auto rounded-full cursor-pointer" onClick={toggleDrawer}>
+      <button className="drawer-toggle-user flex items-center justify-center w-[38px] h-[38px] bg-[#009efb] mr-auto rounded-full cursor-pointer max-[767px]:m-auto" onClick={toggleDrawer}>
         <IoMenuSharp className="menu_icon text-[28px]" />
       </button>
 
