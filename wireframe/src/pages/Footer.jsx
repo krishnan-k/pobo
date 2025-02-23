@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <>
       <div className="footer_section bg-[#f9fafb] py-15 max-[1199px]:py-7">
-        <div className="footer_content max-w-[1320px] m-auto pl-4 pr-4 flex justify-between max-[767px]:flex-col max-[1199px]:flex-wrap max-[1199px]:gap-8">
+        <div className="footer_content max-w-[1320px] m-auto pl-4 pr-4 flex justify-between max-[767px]:flex-col max-[1199px]:flex-wrap max-[1199px]:gap-8 max-[767px]:gap-2">
           <div className="flex justify-start gap-10 max-[767px]:flex-col max-[767px]:gap-5">
             <div className="footer_logo flex-row basis-72 max-[767px]:basis-auto">
               <img src={footerLogo} alt="footer-logo" />
