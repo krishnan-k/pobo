@@ -97,9 +97,9 @@ const Footer = () => {
               Copyrights © 2025 QPOBO. All Rights Reserved,Development - V.1.4.6
             </p>
           </div>
-          <div className="policy_links flex items-center justify-end w-full max-[767px]:justify-center max-[767px]:flex-wrap">
-            <p className="text-sm text-[#6b7280] capitalize border-r-[1.5px] border-gray-400 px-5.5">privacy policy </p>
-            <p className="text-sm text-[#6b7280] capitalize border-r-[1.5px] border-gray-400 px-5.5">Terms and Conditions</p>
+          <div className="policy_links flex items-center justify-end w-full max-[767px]:justify-center max-[576px]:flex-col max-[576px]:gap-1.5 max-[767px]:flex-wrap">
+            <p className="text-sm text-[#6b7280] capitalize border-r-[1.5px] border-gray-400 px-5.5 max-[576px]:border-r-[0px]">privacy policy </p>
+            <p className="text-sm text-[#6b7280] capitalize border-r-[1.5px] border-gray-400 px-5.5 max-[576px]:border-r-[0px]">Terms and Conditions</p>
             <p className="text-sm text-[#6b7280] capitalize px-5.5 pr-0">Refund Policy</p>
           </div>
         </div>
