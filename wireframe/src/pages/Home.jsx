@@ -1,9 +1,10 @@
 import React from "react";
+import Doctor from "./Doctor";
 
 const Home = () => {
   return (
     <div className="home_page">
-      <h1>home</h1>
+      <Doctor/>
     </div>
   );
 };
