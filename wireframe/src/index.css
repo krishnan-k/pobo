@@ -8,12 +8,69 @@
 html {
   scroll-behavior: smooth;
 }
-.flex svg path {
+
+.svgicon svg path {
   fill: #272b41;
 }
-.flex.active svg path{
+
+.svgicon.active svg path {
   fill: white;
 }
-.hospital_pattern{
+
+.hospital_pattern {
   object-fit: cover;
+}
+.menu_icon path{
+  fill: white;
+}
+.drawer-toggle-user, .drawer-close-user{
+  display: none;
+}
+.profile_drawer button.drawer-close{
+  display: none;
+}
+@media screen and (max-width: 1199px) {
+  .profile_drawer button.drawer-close{
+    display: block;
+  }
+  .drawer-toggle-user{
+    display: flex;
+  }
+  .profile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    max-width: 400px;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 3;
+    padding: 0;
+  }
+
+  .profile_drawer.open {
+    transform: translateX(0);
+  }
+
+  .dashboard_section {
+    grid-template-columns: 1fr;
+  }
+
+  /* .dashboard_section:after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    z-index: 2;
+    transition: all 0.3slinear;
+  } */
 }

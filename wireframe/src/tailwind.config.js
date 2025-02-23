@@ -9,6 +9,7 @@ export default {
             fontFamily: {
                 sans: ["Inter", "serif"],
             },
+            margin: ['responsive'],
         },
     },
     plugins: [],
