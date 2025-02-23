@@ -13,7 +13,7 @@ const BookingDetails = () => {
   return (
     <>
       <div
-        className="flex items-end justify-between flex-wrap gap-y-[20px] px-6 py-7 mt-5 rounded-[12px] max-[767px]:flex-col max-[767px]:items-start"
+        className="flex items-end justify-between flex-wrap gap-y-[20px] px-6 py-7 mt-5 rounded-[12px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5.5 max-[767px]:pr-3.5"
         style={{ boxShadow: "rgba(149, 157, 165, 0.1) 0px 21px 35px" }}
       >
         <div className="profile_character flex items-center justify-start gap-2 flex-row basis-44 max-[767px]:basis-auto ">
