@@ -4,6 +4,7 @@ import Navbar from "./component/Navbar";
 import Home from "./pages/Home";
 import Doctor from "./pages/Doctor";
 import Hospital from "./pages/Hospital";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/doctors" element={<Doctor />} />
           <Route path="/hospitals" element={<Hospital />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
