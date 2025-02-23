@@ -20,22 +20,35 @@ html {
 .hospital_pattern {
   object-fit: cover;
 }
-.menu_icon path{
+
+.menu_icon path {
   fill: white;
 }
-.drawer-toggle-user, .drawer-close-user{
+
+.drawer-toggle-user, .drawer-close-user {
   display: none;
 }
-.profile_drawer button.drawer-close{
+
+.profile_drawer button.drawer-close {
   display: none;
 }
+
+@media screen and (max-width: 1540px) {
+  .header_section, .hospital_page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
-  .profile_drawer button.drawer-close{
+  .profile_drawer button.drawer-close {
     display: block;
   }
-  .drawer-toggle-user{
+
+  .drawer-toggle-user {
     display: flex;
   }
+
   .profile {
     position: fixed;
     top: 0;

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import user from "../assets/user.png";
-import { CgMenuLeftAlt } from "react-icons/cg";
 import { IoIosCloseCircle } from "react-icons/io";
 import "../component-css/Navbar.css";
 import { IoMenuSharp } from "react-icons/io5";
@@ -15,10 +14,10 @@ const Navbar = () => {
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
-  // const handleMouseOver = (index) => {
-  //   setActiveState(index);
-  //   setDrawerOpen(!drawerOpen);
-  // };
+  const handleMouseOver = (index) => {
+    setActiveState(index);
+    setDrawerOpen(!drawerOpen);
+  };
   const toggleDropdown = (index) => {
     setOpenSubmenu((prev) => (prev === index ? null : index));
   };
@@ -37,7 +36,7 @@ const Navbar = () => {
 
   const menuItems = [
     {
-      href: "/hospitals",
+      href: "/doctors",
       label: "hospitals",
     },
     {
@@ -54,7 +53,7 @@ const Navbar = () => {
     <div className={`navbar-section ${drawerOpen ? 'active' : ''} bg-[#f9fcff]`}>
       <div className="header_section max-w-[1320px] m-auto flex items-center justify-between pt-7 pb-7 pr-1 pl-1 md_screen">
         <div className="header-logo">
-          <Link to="/">
+          <Link to="/doctors">
             <img
               src={logo}
               alt="logo"
@@ -79,6 +78,7 @@ const Navbar = () => {
                   }`}
                   onMouseEnter={() => setOpenSubmenu(index)}
                   onMouseLeave={() => setOpenSubmenu(null)}
+                  onClick={() => handleMouseOver(index)}
                 >
                   <Link
                     className={`capitalize font-medium text-[15px] flex items-center transition ${

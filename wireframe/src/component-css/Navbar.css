@@ -20,10 +20,6 @@ button.drawer-toggle{
     button.drawer-toggle{
         display: flex;
     }
-    .header_section{
-        padding-left: 15px;
-        padding-right: 15px;
-    }
     .navbar-section.active::after {
         content: "";
         position: fixed;

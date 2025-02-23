@@ -2,7 +2,7 @@ import React from "react";
 
 const Hospital = () => {
   return (
-    <div>
+    <div className="hospital_page">
       <h1>hospitals</h1>
     </div>
   );
