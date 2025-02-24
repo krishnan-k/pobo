@@ -13,7 +13,7 @@ const BookingProgress = () => {
   return (
     <>
       <div
-        className="flex items-end justify-between flex-wrap px-6.5 py-7 mt-5 rounded-[12px] flex-wrap gap-y-[20px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5 max-[767px]:pr-3.5 max-[767px]:py-4 max-[767px]:gap-y-[0px]"
+        className="flex items-end justify-between flex-wrap px-6.5 py-7 mt-3 rounded-[12px] flex-wrap gap-y-[20px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5 max-[767px]:pr-3.5 max-[767px]:py-4 max-[767px]:gap-y-[0px]"
         style={{ boxShadow: "rgba(149, 157, 165, 0.1) 0px 21px 35px" }}
       >
         <div className="profile_character flex items-center justify-start gap-2 flex-row basis-44 max-[767px]:basis-auto max-[767px]:pb-4">

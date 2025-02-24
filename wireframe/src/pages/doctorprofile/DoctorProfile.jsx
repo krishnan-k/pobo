@@ -15,10 +15,9 @@ import { Link } from "react-router-dom";
 import hospitalBg from "../../assets/hospital.png";
 import check from "../../assets/check.png";
 import { IoMenuSharp } from "react-icons/io5";
-const DoctorProfile = () => {
+const DoctorProfile = ({ drawerOpen, setDrawerOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeState, setActiveState] = useState(1);
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
@@ -46,8 +45,8 @@ const DoctorProfile = () => {
       <div
         className={`profile_drawer ${
           drawerOpen ? "open" : ""
-        } profile rounded-[12px]`}
-        style={{ boxShadow: "rgba(149, 157, 165, 0.25) 0px 8px 24px" }}
+        } profile rounded-[12px] max-[1199px]:rounded-[0px]`}
+        style={{ boxShadow: "rgba(149, 157, 165, 0.3) 0px 8px 24px" }}
       >
         <button
           className="drawer-close drawer-close-user p-2"
@@ -55,7 +54,7 @@ const DoctorProfile = () => {
         >
           <IoIosCloseCircle className="w-[35px] h-[35px] text-white" />
         </button>
-        <div className="bg-pattern bg-[#0050ff] rounded-t-[12px] w-full">
+        <div className="bg-pattern bg-[#0050ff] rounded-t-[12px] w-full max-[1199px]:rounded-t-[0px]">
           <img
             src={hospitalBg}
             alt="hospital pattern"
@@ -68,7 +67,7 @@ const DoctorProfile = () => {
             <img
               src={check}
               alt="check"
-              className="w-[20px] h-[20px] absolute right-5 bottom-0"
+              className="w-[20px] h-[20px] absolute right-5 bottom-0 "
             />
           </div>
           <div className="profile_details pt-2 mt-2">

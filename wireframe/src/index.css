@@ -41,6 +41,17 @@ html {
 }
 
 @media screen and (max-width: 1199px) {
+  .section.active:after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    z-index: 2;
+    transition: all 0.3slinear;
+  }
+
   .profile_drawer button.drawer-close {
     display: block;
   }
@@ -75,15 +86,4 @@ html {
   .dashboard_section {
     grid-template-columns: 1fr;
   }
-
-  /* .dashboard_section:after {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    inset: 0;
-    z-index: 2;
-    transition: all 0.3slinear;
-  } */
 }
