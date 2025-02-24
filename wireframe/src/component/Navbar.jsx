@@ -10,7 +10,7 @@ const Navbar = () => {
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [activeState, setActiveState] = useState(1);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);

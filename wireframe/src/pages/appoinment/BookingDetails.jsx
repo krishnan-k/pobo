@@ -14,7 +14,7 @@ const BookingDetails = () => {
   return (
     <>
       <div
-        className="flex items-end justify-between flex-wrap gap-y-[20px] px-6 py-7 mt-5 rounded-[12px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5 max-[767px]:py-4 max-[767px]:pr-3.5 max-[767px]:gap-y-[0px] responsive_box"
+        className="flex items-end justify-between flex-wrap gap-y-[20px] px-6 py-6.5 mt-5 rounded-[12px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5 max-[767px]:py-4 max-[767px]:pr-3.5 max-[767px]:gap-y-[0px] responsive_box"
         style={{ boxShadow: "rgba(149, 157, 165, 0.1) 0px 21px 35px" }}
       >
         <div className="profile_character flex items-center justify-start gap-2 flex-row basis-44 max-[767px]:basis-auto max-[767px]:pb-4">
@@ -168,7 +168,7 @@ const BookingDetails = () => {
             </div>
           </div>
         </div>
-        <div className="booking_status pt-6 mt-7 border-t-[1px] border-[#e2e8f0] max-[767px]:pt-3 max-[767px]:mt-3.5">
+        <div className="booking_status pt-6 mt-5 border-t-[1px] border-[#e2e8f0] max-[767px]:pt-3 max-[767px]:mt-3.5">
           <div className="flex items-center justify-end mb-1 max-[767px]:justify-start flex-wrap gap-y-[5px]">
             <div className="accept px-5.5 flex items-center justify-between gap-2 border-r-[2px] border-gray-200 max-[767px]:pl-0 max-[767px]:border-r-[0px]">
               <i className="fa fa-check text-[#0f9500]" aria-hidden="true"></i>
