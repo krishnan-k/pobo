@@ -13,12 +13,12 @@ const Footer = () => {
   const linkedin = "https://www.linkedin.com/";
   return (
     <>
-      <div className="footer_section bg-[#f9fafb] py-15 max-[1199px]:py-7">
+      <div className="footer_section bg-[#f9fafb] py-14 max-[1199px]:py-7">
         <div className="footer_content max-w-[1320px] m-auto pl-4 pr-4 flex justify-between max-[767px]:flex-col max-[1199px]:flex-wrap max-[1199px]:gap-8 max-[767px]:gap-2">
           <div className="flex justify-start gap-10 max-[767px]:flex-col max-[767px]:gap-5">
             <div className="footer_logo flex-row basis-72 max-[767px]:basis-auto">
               <img src={footerLogo} alt="footer-logo" />
-              <p className="pt-6 text-sm">
+              <p className="pt-7 text-sm">
                 Effortlessly schedule your medical appoinments with QPOBO.
                 Connect with healthcare professionals, manage appoinments &
                 prioritize your well being

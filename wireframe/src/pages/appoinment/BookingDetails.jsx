@@ -81,7 +81,7 @@ const BookingDetails = () => {
         </div>
       </div>
       <div
-        className="pl-8.5 pr-6.5 py-6.5 rounded-[12px] border border-[#e2e8f0] my-4 max-[767px]:pl-5 max-[767px]:pr-5 max-[767px]:my-4 max-[767px]:pb-3.5 responsive_box1"
+        className="pl-8.5 pr-6.5 pb-5 pt-6 rounded-[12px] border border-[#e2e8f0] my-4 max-[767px]:pl-5 max-[767px]:pr-5 max-[767px]:my-4 max-[767px]:pb-3.5 responsive_box1"
         style={{ boxShadow: "rgba(149, 157, 165, 0.15) 0px 8px 24px" }}
       >
         <div className="appoinment_details_section flex items-start justify-between flex-wrap gap-y-[20px] max-[767px]:flex-col max-[767px]:gap-y-[0px]">
