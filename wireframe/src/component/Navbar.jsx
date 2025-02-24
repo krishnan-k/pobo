@@ -106,6 +106,7 @@ const Navbar = () => {
                     {item.submenu && (
                       <i className="fa fa-chevron-down ml-3 text-[10px]"></i>
                     )}
+                    <i className="fa fa-chevron-down ml-2 text-[10px]"></i>
                   </Link>
 
                   {item.submenu && openSubmenu === index && (
