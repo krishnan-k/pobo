@@ -30,15 +30,17 @@ const Footer = () => {
               </h2>
               <div className="flex items-center justify-start gap-2 pb-3.5">
                 <img src={ten} alt="image" />
-                <p className="capitalize text-[15px]">thillai nagar, Trichy</p>
+                <p className="capitalize text-[14px]">thillai nagar, Trichy</p>
               </div>
               <div className="flex items-center justify-start gap-2 pb-3.5">
                 <img src={phone} alt="image" />
-                <p className="capitalize text-[15px]">+91 96299 12381</p>
+                <Link to='tel: +91 96299 12381' className="link"><p className="capitalize text-[14px] hover:text-[#ff5200] transition">+91 96299 12381</p></Link>
+                
               </div>
               <div className="flex items-center justify-start gap-2 pb-3.5">
                 <img src={mail} alt="image" />
-                <p className="text-[15px]">qpobosales@pobotechnologies.com</p>
+                <Link to='mailto: qpobosales@pobotechnologies.com'><p className="text-[14px] hover:text-[#ff5200] transition">qpobosales@pobotechnologies.com</p></Link>
+                
               </div>
             </div>
           </div>
@@ -58,13 +60,13 @@ const Footer = () => {
                     type="email"
                     autocomplete="email"
                     required
-                    className="bg-white min-w-0 flex-auto rounded-md border border-[#e2e8f0] px-3.5 py-3 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 placeholder:capitalize placeholder:font-medium focus:outline-2 focus:-outline-offset-2 focus:outline-[#ff5200] sm:text-sm/6"
+                    className="bg-white min-w-0 flex-auto rounded-md border border-[#e2e8f0] px-3.5 py-3 text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-700 placeholder:capitalize placeholder:font-medium placeholder:font-[16px] focus:outline-2 focus:-outline-offset-2 focus:outline-[#ff5200] sm:text-sm/6"
                     placeholder="Enter email address"
                   />
                   <button
                     type="submit"
-                    className="h-[48px] flex-none capitalize absolute top-1/2 -translate-y-1/2 right-0 rounded-tl-none rounded-tr-[5px] rounded-bl-none rounded-br-[5px] transition
-                     bg-[#ff5200] px-3.5 py-3 text-sm font-semibold text-white shadow-xs hover:bg-[#009efb] focus-visible:outline-2 
+                    className="h-[48px] font-[16px] flex-none capitalize absolute top-1/2 -translate-y-1/2 right-0 rounded-tl-none rounded-tr-[5px] rounded-bl-none rounded-br-[5px] transition
+                     bg-[#ff5200] px-4 py-3 text-sm font-semibold text-white shadow-xs hover:bg-[#009efb] focus-visible:outline-2 
                      focus-visible:outline-offset-2 focus-visible:outline-[#ff5200] max-[576px]:relative max-[576px]:inset-auto max-[576px]:transform-none max-[576px]:translate-none
                      max-[576px]:rounded-[5px]"
                   >
@@ -93,14 +95,14 @@ const Footer = () => {
       <div className="footer-bottom bg-[#f3f4f6] py-4">
         <div className="max-w-[1320px] m-auto pl-4 pr-4 flex items-center justify-between max-[767px]:flex-col max-[767px]:gap-2">
           <div className="footer-bottom-content container">
-            <p className="text-sm text-[#2c2d2e] max-[767px]:text-center">
-              Copyrights © 2025 QPOBO. All Rights Reserved,Development - V.1.4.6
+            <p className="text-sm text-[#858383] max-[767px]:text-center">
+              Copyright © 2025 QPOBO. All Rights Reserved, Development - V.1.4.6
             </p>
           </div>
           <div className="policy_links flex items-center justify-end w-full max-[767px]:justify-center max-[576px]:flex-col max-[576px]:gap-1.5 max-[767px]:flex-wrap">
-            <p className="text-sm text-[#2c2d2e] capitalize border-r-[1px] border-gray-400 px-5.5 max-[576px]:border-r-[0px]">privacy policy </p>
-            <p className="text-sm text-[#2c2d2e] capitalize border-r-[1px] border-gray-400 px-5.5 max-[576px]:border-r-[0px]">Terms and Conditions</p>
-            <p className="text-sm text-[#2c2d2e] capitalize px-5.5 pr-0">Refund Policy</p>
+            <Link to=""><p className="text-sm text-[#303030] capitalize border-r-[1px] border-gray-400 px-3.5 max-[576px]:border-r-[0px] hover:text-[#ff5200] transition">privacy policy </p></Link>
+            <Link to=""><p className="text-sm text-[#303030] capitalize border-r-[1px] border-gray-400 px-3.5 max-[576px]:border-r-[0px] hover:text-[#ff5200] transition">Terms and Conditions</p></Link>
+            <Link to=""><p className="text-sm text-[#303030] capitalize px-3.5 pr-0 hover:text-[#ff5200] transition">Refund Policy</p></Link>
           </div>
         </div>
       </div>

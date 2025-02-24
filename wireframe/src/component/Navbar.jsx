@@ -5,6 +5,7 @@ import user from "../assets/user.png";
 import { IoIosCloseCircle } from "react-icons/io";
 import "../component-css/Navbar.css";
 import { IoMenuSharp } from "react-icons/io5";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
 const Navbar = () => {
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [activeState, setActiveState] = useState(1);
@@ -50,7 +51,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className={`navbar-section ${drawerOpen ? 'active' : ''} bg-[#f9fcff]`}>
+    <div
+      className={`navbar-section ${drawerOpen ? "active" : ""} bg-[#f9fcff]`}
+    >
       <div className="header_section max-w-[1320px] m-auto flex items-center justify-between pt-7 pb-7 pr-1 pl-1 md_screen">
         <div className="header-logo">
           <Link to="/doctors">
@@ -61,12 +64,15 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <button className="drawer-toggle ml-auto cursor-pointer" onClick={toggleDrawer}>
-          <IoMenuSharp className="w-[35px] h-[35px] mr-4" />
+        <button
+          className="drawer-toggle ml-auto cursor-pointer"
+          onClick={toggleDrawer}
+        >
+          <HiOutlineMenuAlt1 className="w-[35px] h-[35px] mr-4 text-[#ff5200]" />
         </button>
         <div className={`nav-content ${drawerOpen ? "open" : ""}`}>
           <button className="drawer-close p-2" onClick={toggleDrawer}>
-            <IoIosCloseCircle className="w-[35px] h-[35px] text-[#ff5200]"/>
+            <IoIosCloseCircle className="w-[35px] h-[35px] text-[#ff5200]" />
           </button>
           <nav>
             <ul className="flex">
@@ -81,7 +87,7 @@ const Navbar = () => {
                   onClick={() => handleMouseOver(index)}
                 >
                   <Link
-                    className={`capitalize font-medium text-[15px] flex items-center transition ${
+                    className={`capitalize font-medium text-[15px] flex items-center transition hover:text-[#ff5200] ${
                       activeState === index
                         ? "text-[#ff5200]"
                         : "text-[#1f2937]"

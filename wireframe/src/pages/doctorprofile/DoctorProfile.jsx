@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import hospitalBg from "../../assets/hospital.png";
 import check from "../../assets/check.png";
 import { IoMenuSharp } from "react-icons/io5";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
 const DoctorProfile = ({ drawerOpen, setDrawerOpen }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [activeState, setActiveState] = useState(1);
@@ -39,7 +40,8 @@ const DoctorProfile = ({ drawerOpen, setDrawerOpen }) => {
         className="drawer-toggle-user flex items-center justify-center w-[38px] h-[38px] bg-[#009efb] mr-auto rounded-full cursor-pointer max-[767px]:m-auto"
         onClick={toggleDrawer}
       >
-        <IoMenuSharp className="menu_icon text-[28px]" />
+        <HiOutlineMenuAlt1 className="menu_icon text-[28px] text-[#FFF]" />
+        
       </button>
 
       <div

@@ -33,6 +33,40 @@ html {
   display: none;
 }
 
+.book_status .absolute:after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  bottom: -3px;
+  background: #009efb;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.book_status.progress_status .absolute::after {
+  background: #ff5200;
+}
+.consul,.resposive_mobile{margin-left: 2px;}
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.book_status .absolute {
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}
+
 @media screen and (max-width: 1540px) {
   .header_section, .hospital_page {
     padding-left: 15px;
@@ -85,5 +119,14 @@ html {
 
   .dashboard_section {
     grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .responsive_box {
+    box-shadow: rgba(76, 175, 80, 1) -1px 0px 0px 2px !important;
+  }
+  .responsive_box1 {
+    box-shadow: rgba(190, 18, 60, 1) -1px 0px 0px 2px !important;
   }
 }

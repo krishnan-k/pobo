@@ -9,11 +9,12 @@ import six from "../../assets/6.png";
 import seven from "../../assets/7.png";
 import eight from "../../assets/8.png";
 import nine from "../../assets/9.png";
+import { Link } from "react-router";
 const BookingDetails = () => {
   return (
     <>
       <div
-        className="flex items-end justify-between flex-wrap gap-y-[20px] px-6 py-7 mt-5 rounded-[12px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5 max-[767px]:py-4 max-[767px]:pr-3.5 max-[767px]:gap-y-[0px]"
+        className="flex items-end justify-between flex-wrap gap-y-[20px] px-6 py-7 mt-5 rounded-[12px] max-[767px]:flex-col max-[767px]:items-start max-[767px]:pl-5 max-[767px]:py-4 max-[767px]:pr-3.5 max-[767px]:gap-y-[0px] responsive_box"
         style={{ boxShadow: "rgba(149, 157, 165, 0.1) 0px 21px 35px" }}
       >
         <div className="profile_character flex items-center justify-start gap-2 flex-row basis-44 max-[767px]:basis-auto max-[767px]:pb-4">
@@ -32,7 +33,7 @@ const BookingDetails = () => {
 
         <div className="booking_date">
           <div className="booking_date_time">
-            <p className="text-[#334155] uppercase font-normal flex items-center justify-between gap-1 text-[14px] mb-1">
+            <p className="text-[#334155] uppercase font-normal flex items-center justify-between gap-1 text-[15px] mb-1">
               <MdOutlineAccessTimeFilled className="text-[#272b41]" />
               21-feb-2025 12:00 PM
             </p>
@@ -64,7 +65,7 @@ const BookingDetails = () => {
             <div className="start_now px-3.5 pr-0 flex items-center justify-between gap-2 relative max-[767px]:pl-0">
               <i className="fa-solid fa-play"></i>
               <div className="book_status">
-                <div className="absolute right-0 -top-[23px] bg-[#009efb] px-2 py-1 rounded-lg max-[767px]:relative max-[767px]:top-0">
+                <div className="absolute right-0 -top-[26px] bg-[#009efb] px-2 py-1 rounded-lg max-[767px]:relative max-[767px]:top-0">
                   <p className="text-xs capitalize font-bold text-white text-center">
                     booked
                   </p>
@@ -80,13 +81,13 @@ const BookingDetails = () => {
         </div>
       </div>
       <div
-        className="pl-8.5 pr-6.5 py-6.5 rounded-[12px] border border-[#e2e8f0] my-2 max-[767px]:pl-5 max-[767px]:pr-5 max-[767px]:pb-3.5"
+        className="pl-8.5 pr-6.5 py-6.5 rounded-[12px] border border-[#e2e8f0] my-2 max-[767px]:pl-5 max-[767px]:pr-5 max-[767px]:my-4 max-[767px]:pb-3.5"
         style={{ boxShadow: "rgba(149, 157, 165, 0.15) 0px 8px 24px" }}
       >
         <div className="appoinment_details_section flex items-start justify-between flex-wrap gap-y-[20px] max-[767px]:flex-col max-[767px]:gap-y-[0px]">
           <div className="appoinment_information max-[767px]:w-full max-[767px]:pb-4 max-[767px]:mb-4 max-[767px]:border-b-[1px] max-[767px]:border-[#e2e8f0]">
             <div className="flex items-center justify-start gap-2 pb-2.5">
-              <img src={one} alt="image" />
+              <img src={one} alt="image" className="ml-1" />
               {/* <i
                 class="fa-regular fa-address-book text-[#6b72a1] text-lg"
                 aria-hidden="true"
@@ -98,17 +99,27 @@ const BookingDetails = () => {
             <div className="flex items-center justify-start gap-2 pb-2.5">
               <img src={two} alt="image" />
               {/* <i class="fa-solid fa-envelope text-[#6b72a1] text-lg"></i> */}
-              <p className="text-[#686767] font-normal text-[15px]">
-                sanjaikumar.pobo@gmail.com
-              </p>
+              <>
+                <Link to="mailto: sanjaikumar.pobo@gmail.com">
+                  <p className="text-[#686767] font-normal text-[15px] hover:text-[#ff5200] transition">
+                    sanjaikumar.pobo@gmail.com
+                  </p>
+                </Link>
+              </>
             </div>
             <div className="flex items-center justify-start gap-2">
               {/* <i
                 class="fa fa-mobile text-[#6b72a1] text-lg"
                 aria-hidden="true"
               ></i> */}
-              <img src={three} alt="image" />
-              <p className="text-[#686767] font-normal text-sm">9655770823</p>
+              <img src={three} alt="image" className="ml-1" />
+              <>
+                <Link to="tel: 9655770823" className="link">
+                  <p className="text-[#686767] font-normal text-[15px] resposive_mobile hover:text-[#ff5200] transition">
+                    9655770823
+                  </p>
+                </Link>
+              </>
             </div>
           </div>
           <div className="booking_consulation pl-6.5 max-[767px]:pl-0 max-[767px]:w-full max-[767px]:pb-4 max-[767px]:mb-4 max-[767px]:border-b-[1px] max-[767px]:border-[#e2e8f0]">
@@ -119,17 +130,17 @@ const BookingDetails = () => {
                 21-feb-2025 12:00 pm
               </p>
             </div>
-            <div className="flex items-center justify-start gap-2 pb-2.5">
+            <div className="flex items-center justify-start gap-2 pb-2.5 consul">
               {/* <i class="fa fa-stethoscope text-[#6b72a1] text-lg"></i> */}
-              <img src={five} alt="image" />
-              <p className="text-[#686767] font-normal capitalize text-sm">
+              <img src={five} alt="image" className="ml-.5" />
+              <p className="text-[#686767] font-normal capitalize text-[15px]">
                 consultation
               </p>
             </div>
             <div className="flex items-center justify-start gap-2">
               {/* <i class="fa fa-hospital text-[#6b72a1] text-lg"></i> */}
               <img src={six} alt="image" />
-              <p className="text-[#686767] font-normal capitalize text-sm">
+              <p className="text-[#686767] font-normal capitalize text-[15px]">
                 direct visit
               </p>
             </div>
@@ -138,7 +149,7 @@ const BookingDetails = () => {
             <div className="flex items-center justify-start gap-2 pb-2.5">
               {/* <i class="fa-solid fa-bookmark text-[#6b72a1] text-lg"></i> */}
               <img src={seven} alt="image" />
-              <p className="capitalize font-bold text-[#009efb] text-sm">
+              <p className="capitalize font-bold text-[#009efb] text-[15px]">
                 booked
               </p>
             </div>
@@ -148,12 +159,12 @@ const BookingDetails = () => {
                 aria-hidden="true"
               ></i> */}
               <img src={eight} alt="image" />
-              <p className="text-[#6b72a1] font-normal text-sm">1500</p>
+              <p className="text-[#6b72a1] font-normal text-[15px]">1500</p>
             </div>
             <div className="flex items-center justify-start gap-2">
               {/* <i class="far fa-check-circle text-[#000] text-lg"></i> */}
-              <img src={nine} alt="image" />
-              <p className="capitalize text-[#6b72a1] text-sm">paid</p>
+              <img src={nine} alt="image" className="-ml-1.5" />
+              <p className="capitalize text-[#6b72a1] text-[15px]">paid</p>
             </div>
           </div>
         </div>
