@@ -6,7 +6,11 @@ import Profile from "../../icons/User";
 import Social from "../../icons/Social";
 import Key from "../../icons/Key";
 import Log from "../../icons/Log";
-import { IoIosCloseCircle, IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+import {
+  IoIosCloseCircle,
+  IoMdArrowDropdown,
+  IoMdArrowDropup,
+} from "react-icons/io";
 import { Link } from "react-router-dom";
 import hospitalBg from "../../assets/hospital.png";
 import check from "../../assets/check.png";
@@ -32,7 +36,10 @@ const DoctorProfile = () => {
   ];
   return (
     <>
-      <button className="drawer-toggle-user flex items-center justify-center w-[38px] h-[38px] bg-[#009efb] mr-auto rounded-full cursor-pointer max-[767px]:m-auto" onClick={toggleDrawer}>
+      <button
+        className="drawer-toggle-user flex items-center justify-center w-[38px] h-[38px] bg-[#009efb] mr-auto rounded-full cursor-pointer max-[767px]:m-auto"
+        onClick={toggleDrawer}
+      >
         <IoMenuSharp className="menu_icon text-[28px]" />
       </button>
 
@@ -42,7 +49,10 @@ const DoctorProfile = () => {
         } profile rounded-[12px]`}
         style={{ boxShadow: "rgba(149, 157, 165, 0.25) 0px 8px 24px" }}
       >
-        <button className="drawer-close drawer-close-user p-2" onClick={toggleDrawer}>
+        <button
+          className="drawer-close drawer-close-user p-2"
+          onClick={toggleDrawer}
+        >
           <IoIosCloseCircle className="w-[35px] h-[35px] text-white" />
         </button>
         <div className="bg-pattern bg-[#0050ff] rounded-t-[12px] w-full">
@@ -126,8 +136,7 @@ const DoctorProfile = () => {
           </div>
         </div>
 
-        {/* Sidebar Menu List */}
-        <div className="list_menu_item p-2 w-full">
+        <div className="list_menu_item p-2 w-full overflow-y-auto max-h-[50vh] sm:max-h-[60vh] -webkit-overflow-scrolling-touch">
           <div className="hs-dropdown relative flex">
             <div className="p-1.5 space-y-0.5 block w-full">
               {menuItems.map((item) => (
@@ -148,7 +157,6 @@ const DoctorProfile = () => {
             </div>
           </div>
         </div>
-        {/* End Sidebar Menu */}
       </div>
     </>
   );
