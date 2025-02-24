@@ -3,7 +3,7 @@ import footerLogo from "../assets/footerlogo.png";
 import ten from "../assets/ten.png";
 import phone from "../assets/11.png";
 import mail from "../assets/12.png";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 const Footer = () => {
@@ -30,7 +30,7 @@ const Footer = () => {
               </h2>
               <div className="flex items-center justify-start gap-2 pb-3.5">
                 <img src={ten} alt="image" />
-                <p className="capitalize text-[15px]">thillai nagar</p>
+                <p className="capitalize text-[15px]">thillai nagar, Trichy</p>
               </div>
               <div className="flex items-center justify-start gap-2 pb-3.5">
                 <img src={phone} alt="image" />
@@ -74,17 +74,17 @@ const Footer = () => {
               </form>
             </div>
             <div className="social-icons flex items-center justify-start gap-4 pt-5">
-              <Link to={instagram} target="blank" className="w-[38px] h-[38px] flex items-center justify-center bg-[#e5e7eb] rounded-full">
-                <FaInstagram />
-              </Link>
               <Link to={facebook} target="blank" className="w-[38px] h-[38px] flex items-center justify-center bg-[#e5e7eb] rounded-full">
-                <FaFacebook />
+                <FaFacebook className="text-[20px]"/>
+              </Link>
+              <Link to={instagram} target="blank" className="w-[38px] h-[38px] flex items-center justify-center bg-[#e5e7eb] rounded-full">
+                <FaInstagram className="text-[20px]"/>
               </Link>
               <Link to={twitter} target="blank" className="w-[38px] h-[38px] flex items-center justify-center bg-[#e5e7eb] rounded-full">
-                <FaXTwitter />
+                <FaXTwitter className="text-[20px]"/>
               </Link>
               <Link to={linkedin} target="blank" className="w-[38px] h-[38px] flex items-center justify-center bg-[#e5e7eb] rounded-full">
-                <FaLinkedin />
+                <FaLinkedinIn className="text-[20px]"/>
               </Link>
             </div>
           </div>
@@ -93,14 +93,14 @@ const Footer = () => {
       <div className="footer-bottom bg-[#f3f4f6] py-4">
         <div className="max-w-[1320px] m-auto pl-4 pr-4 flex items-center justify-between max-[767px]:flex-col max-[767px]:gap-2">
           <div className="footer-bottom-content container">
-            <p className="text-sm text-[#6b7280] max-[767px]:text-center">
+            <p className="text-sm text-[#2c2d2e] max-[767px]:text-center">
               Copyrights © 2025 QPOBO. All Rights Reserved,Development - V.1.4.6
             </p>
           </div>
           <div className="policy_links flex items-center justify-end w-full max-[767px]:justify-center max-[576px]:flex-col max-[576px]:gap-1.5 max-[767px]:flex-wrap">
-            <p className="text-sm text-[#6b7280] capitalize border-r-[1.5px] border-gray-400 px-5.5 max-[576px]:border-r-[0px]">privacy policy </p>
-            <p className="text-sm text-[#6b7280] capitalize border-r-[1.5px] border-gray-400 px-5.5 max-[576px]:border-r-[0px]">Terms and Conditions</p>
-            <p className="text-sm text-[#6b7280] capitalize px-5.5 pr-0">Refund Policy</p>
+            <p className="text-sm text-[#2c2d2e] capitalize border-r-[1px] border-gray-400 px-5.5 max-[576px]:border-r-[0px]">privacy policy </p>
+            <p className="text-sm text-[#2c2d2e] capitalize border-r-[1px] border-gray-400 px-5.5 max-[576px]:border-r-[0px]">Terms and Conditions</p>
+            <p className="text-sm text-[#2c2d2e] capitalize px-5.5 pr-0">Refund Policy</p>
           </div>
         </div>
       </div>
